@@ -5,7 +5,7 @@ import { generateId } from '../utils/helpers';
 
 const env = (import.meta as any).env || {};
 const OPENROUTER_API_KEY = env.VITE_OPENROUTER_API_KEY;
-const OPENROUTER_MODEL = 'nvidia/nemotron-3-super-120b-a12b:free';
+const OPENROUTER_MODEL = 'qwen/qwen3-coder:free';
 
 export const generateQuizQuestions = async (payload: QuizRequest): Promise<Question[]> => {
   if (!OPENROUTER_API_KEY || OPENROUTER_API_KEY === 'YOUR_API_KEY') {
